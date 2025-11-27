@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Redirect</title>
+  <script>
+    // 🔁 Replace this with your current PDF link
+    const pdfUrl = "new.pdf";
+
+    // Auto-redirect to PDF
+    window.onload = () => {
+      window.location.href = pdfUrl;
+    };
+  </script>
+  <style>
+    body {
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: system-ui, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+    .box {
+      padding: 20px 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Redirecting to latest PDF...</h2>
+    <p>If you are not redirected automatically, <a id="link" href="#">click here</a>.</p>
+  </div>
+
+  <script>
+    document.getElementById("link").href = pdfUrl;
+  </script>
+</body>
+</html>
